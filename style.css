@@ -68,7 +68,7 @@ figure.logo {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 1rem;
+	gap: 1.5rem;
 }
 
 .box {
