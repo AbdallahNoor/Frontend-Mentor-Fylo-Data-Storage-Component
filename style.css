@@ -1,0 +1,291 @@
+:root {
+	--bgColor: hsl(229, 57%, 11%);
+	--fontColor: hsl(0, 0%, 100%);
+	--iconsColor: hsl(243, 100%, 93%);
+	--barColor: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+	--GrayishBlue: hsl(229, 7%, 55%);
+	--DarkBlue: hsl(228, 56%, 26%);
+	--fontSize: 14px;
+	--mainFont: "Raleway", sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body,
+html {
+	height: 100vh;
+	font-size: var(--fontSize);
+	font-family: var(--mainFont);
+	background: var(--bgColor) no-repeat url(bg-mobile.png);
+	color: var(--fontColor);
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	overflow: auto;
+}
+
+.container {
+	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	gap: 1rem;
+}
+/* ################################################################### */
+.card1 {
+	background-color: var(--DarkBlue);
+	border-radius: 5px 100px 5px 5px;
+
+	padding: 2.5rem;
+}
+
+figure.logo {
+	height: 2.5rem;
+	width: 8rem;
+	background: no-repeat url(logo.svg);
+	background-size: 100%;
+}
+
+.icons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 1rem;
+}
+
+.box {
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: var(--bgColor);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+figure.icon1 {
+	height: 2rem;
+	width: 1.2rem;
+	background: no-repeat center url(icon-document.svg);
+	background-size: 100%;
+}
+
+figure.icon2 {
+	height: 2rem;
+	width: 1.2rem;
+	background: no-repeat center url(icon-folder.svg);
+	background-size: 100%;
+}
+
+figure.icon3 {
+	height: 2rem;
+	width: 1.2rem;
+	background: no-repeat center url(icon-upload.svg);
+	background-size: 100%;
+}
+
+/* ################################################## */
+
+.card2 {
+	padding: 2rem 2rem 4rem 2rem;
+	border-radius: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	background-color: var(--DarkBlue);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/* ################################################### */
+
+.bar {
+	margin: 1rem auto;
+	width: 100%;
+	height: 1.5rem;
+	background-color: var(--bgColor);
+	border-radius: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+}
+.gradient {
+	height: 1rem;
+	width: 81.5%;
+	left: 5px;
+	border-radius: 10px;
+	position: absolute;
+	background-image: -o-linear-gradient(
+		left,
+		hsl(6, 100%, 80%),
+		hsl(335, 100%, 65%)
+	);
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(hsl(6, 100%, 80%)),
+		to(hsl(335, 100%, 65%))
+	);
+	background-image: linear-gradient(
+		to right,
+		hsl(6, 100%, 80%),
+		hsl(335, 100%, 65%)
+	);
+}
+.gradient::after {
+	content: "";
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	right: 1px;
+	top: 1.5px;
+}
+
+.range {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/* ########################################################## */
+
+.card3 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-transform: translateY(-75%);
+	-ms-transform: translateY(-75%);
+	transform: translateY(-75%);
+}
+
+.card3 p {
+	background-color: white;
+	color: black;
+	font-weight: 700;
+	font-size: 2.5rem;
+	padding: 1rem 0.5rem;
+	text-align: center;
+	width: 60%;
+	border-radius: 10px;
+	position: relative;
+}
+
+span {
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: rgba(0, 0, 0, 0.507);
+}
+
+/* ############################################################# */
+
+@media screen and (min-width: 375px) {
+	body {
+		background: no-repeat url(bg-desktop.png);
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		background: no-repeat url(bg-desktop.png);
+		background-size: cover;
+	}
+	.container {
+		grid-template-columns: 1fr 2fr;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+	.card1 {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		justify-self: flex-end;
+		padding: 2.5rem 7rem 2.5rem 2.5rem;
+	}
+
+	.card2 {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		padding: 2rem;
+	}
+
+	.card3 {
+		grid-area: 2 / 2 / 3 / 3;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+
+		-webkit-transform: translate(-5%, -272%);
+
+		-ms-transform: translate(-5%, -272%);
+
+		transform: translate(-5%, -272%);
+	}
+	.card3 p {
+		border-radius: 10px 10px 0 10px;
+		width: 35%;
+	}
+
+	.card3 p::after {
+		content: "";
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border: 16px solid;
+		border-color: transparent white transparent transparent;
+		bottom: -15px;
+		right: 0;
+	}
+}
